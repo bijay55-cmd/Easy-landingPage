@@ -1,0 +1,315 @@
+*{
+    box-sizing: border-box;
+}
+/*Navbar*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+a:hover {
+    text-decoration: 2px underline green;
+}
+.navbtn{
+display: none;
+}  
+/*First Section*/
+section::after{
+    content:'';
+    background-image: url('./images/bg-intro-mobile.svg');
+    background-repeat: no-repeat;
+    background-size:contain;
+    position: absolute;
+    top: 75px;
+    width: 95%;
+    height: 100%;
+    z-index: -1;
+}
+.firstsection{
+    text-align: center;
+    margin: 0;
+}
+.firstsection img{
+max-width: 100%;
+object-fit: contain;
+object-position:0 -100px;
+}
+.paragraph1{
+    position: relative;
+    top: -70px;
+    padding:20px;
+}
+
+.paragraph1 button{
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: white;
+    background-image:linear-gradient(30deg,hsl(136,65%,51%), hsl(192, 70%, 51%));
+}
+/*Second Section*/
+.fourline{
+    text-align: center;
+    background-color: rgb(230, 227, 227);
+}
+.openbanking{
+    position: relative;
+    padding: 10px;
+    top: 10px;
+}
+/*Last Section*/
+.card{
+    padding: 20px;
+}
+.card2 img{
+    width: 100%;
+}
+.card2{
+    margin: 30px 0;
+    background-color: aliceblue;
+    padding: 10px 20px;
+}
+.articleheader{
+    text-align: center;
+}
+/*Footer*/
+footer{
+    background-color:hsl(233, 26%, 24%);
+}
+.footersection{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+.social{
+    margin: 10px auto;
+}
+.social img{
+    padding:5px;
+}
+.footerlink ul{
+color: white;
+text-align: center;
+list-style: none;
+padding: 10px;
+}
+.footerlink li{
+    margin: 10px;
+}
+.footersection button{
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: white;
+    background-image:linear-gradient(30deg,hsl(136,65%,51%), hsl(192, 70%, 51%));
+}
+.copyright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.copyright p{
+    color: white;
+}
+@media screen and (max-width:800px){
+    nav img{
+        width:50%;
+    }
+    nav ul{
+        background-color: whitesmoke;
+        box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+        position: fixed;
+        flex-direction: column;
+        text-align: center;
+        top: 80px;
+        width: 80%;
+        left: 10%;
+        transform: translate(120%);
+    }
+    nav ul li{
+        margin: 10px;
+    }
+    .hamburger{
+        display: block;
+        padding: 10px;
+        position: relative;
+        left: 20%;
+    }
+    nav ul.show{
+        transform: translate(0);
+    }
+}    
+@media all and (min-width: 801px) and (max-width: 1019px){
+    nav img{
+        width: 20%;
+    }
+    .login{
+        list-style: circle;
+    }
+    nav ul{
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+    }
+    nav ul li{
+        margin: 0 15px;
+    }
+    a{
+        text-decoration: none;
+        color:black;
+    }
+    .navbtn{
+       display: block;
+       border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: white;
+    background-image:linear-gradient(30deg,hsl(136,65%,51%), hsl(192, 70%, 51%));
+    }
+    .hamburger{
+        display: none;
+    }
+       section:after{
+        background-image: url('./images/bg-intro-desktop.svg');
+        background-size:contain;
+        width: 100%;
+        position: absolute;
+        right:0;
+    }
+}
+@media screen and (min-width:1020px){
+    nav img{
+        width: 20%;
+    }
+    .login{
+        list-style: circle;
+    }
+    nav ul{
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+    }
+    nav ul li{
+        margin: 0 15px;
+    }
+    a{
+        text-decoration: none;
+        color:black;
+    }
+    .navbtn{
+       display: block;
+       border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: white;
+    background-image:linear-gradient(30deg,hsl(136,65%,51%), hsl(192, 70%, 51%));
+    }
+    .hamburger{
+        display: none;
+    }
+    section:after{
+        background-image: url('./images/bg-intro-desktop.svg');
+        background-size:contain;
+        width: 50%;
+        position: absolute;
+        right:0;
+        background-position-x: 50px;
+    }
+    .firstsection{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .firstsection img{
+        object-position:50px -100px;
+        position: relative;
+        z-index: 1;
+    }
+    .paragraph1{
+        margin:auto;
+        text-align: left;
+        font-size: 20px;
+        position: relative;
+        left: 5%;
+    }
+    .paragraph1 p{
+        width: 70%;
+    }
+    .fourline{
+        position: relative;
+        bottom: 150px;
+    }
+    .openbanking{
+        text-align: left;
+        width: 50%;
+        position: relative;
+        left: 5%;
+    }
+    .services{
+        display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+    }
+    .card h1{
+        font-size: 20px;
+    }
+    .articleheader{
+        text-align: left;
+       margin:0 5%;
+    }
+   .article{
+       display: flex;
+   }
+   .card2{
+    font-size: 10px;
+    padding: 10px;
+    margin: 1%;
+    background-color: aliceblue;
+   }
+   .card2 p{
+       font-size: 15px;
+   }
+   .card2 img{
+       width: 100%;
+       height: 50%;
+   }
+   footer{
+       position: relative;
+       top: 10px;
+   }
+    .footersection{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .footerlink{
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+    }
+    .footerlink ul{
+        text-align: left;
+    }
+    }
+    
+
